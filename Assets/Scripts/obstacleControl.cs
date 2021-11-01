@@ -6,9 +6,6 @@ public class obstacleControl : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<CubeController>())
-        {
-            other.gameObject.SetActive(false);
-        }
+
     }
 }
