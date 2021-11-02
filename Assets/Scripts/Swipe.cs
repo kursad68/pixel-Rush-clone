@@ -71,7 +71,7 @@ public class Swipe : MonoBehaviour
                     isjump = false;
                     Rb.velocity =new Vector3(0,jumpToMove,0);
                     StartCoroutine(JumpforWait(jumpForWait));
-                    EventManager.onAnimationPlay.Invoke("Attack4");
+                    EventManager.onAnimationPlay.Invoke("jumping");
                  
 
                 }

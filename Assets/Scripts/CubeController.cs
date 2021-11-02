@@ -24,15 +24,25 @@ public class CubeController : MonoBehaviour
         if (typeCube == CubeType.shoulder)
         {
             EventManager.shoulder = true;
+            EventManager.shoulderSize--;
+            if (EventManager.shoulderSize == 0)
+            {
+                EventManager.onAnimationPlay("creed");
+            }
         }else if(typeCube == CubeType.body)
         {
             EventManager.body = true;
-        }else if(typeCube == CubeType.handle)
+            EventManager.bodySize--;
+        }
+        else if(typeCube == CubeType.handle)
         {
             EventManager.handle = true;
-        }else if(typeCube == CubeType.head)
+            EventManager.handleSize--;
+        }
+        else if(typeCube == CubeType.head)
         {
             EventManager.head = true;
+            EventManager.headSize--;
         }
         GameObject obj = objectPool.GetPooledObject(0);
         obj.transform.position = transform.position;

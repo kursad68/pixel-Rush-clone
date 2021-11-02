@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (EventManager.handleSize == 0 && EventManager.headSize == 0 && EventManager.bodySize == 0 && EventManager.shoulderSize == 0)
+        {
+            Debug.Log("finish");
+        }
         if (isGameStarted == false && Input.GetMouseButton(0))
         {
             isGameStarted = true;

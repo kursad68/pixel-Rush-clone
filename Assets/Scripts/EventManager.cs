@@ -15,10 +15,8 @@ public enum CubeType
 
 public static class EventManager 
 {
-    public static bool shoulder,
-    body,
-    head,
-    handle;
+    public static bool shoulder,body,head,handle;
+    public static int shoulderSize, bodySize, headSize, handleSize;
     public static Action<string,string> onAnimatorAction;
     public static Action<string> onAnimationPlay;
     public static Func<GameManager> GetScriptGameManager;

@@ -6,10 +6,17 @@ public class collectableCubes : MonoBehaviour
 {
     [SerializeField]
     private GameObject Shoulder, Shoulder1, Handle, Handle1, Body, Head;
-    public int CubeSize;
+    private int shoulderSize,handleSize,headSize,bodySize;
     private void Start()
     {
-        CubeSize = Shoulder.transform.childCount * 2 + Handle.transform.childCount * 2 + Body.transform.childCount + Head.transform.childCount;
+        shoulderSize = Shoulder.transform.childCount * 2;
+        handleSize = Handle.transform.childCount * 2;
+        bodySize = Body.transform.childCount;
+        headSize = Head.transform.childCount;
+        EventManager.headSize = headSize;
+        EventManager.bodySize = bodySize;
+        EventManager.handleSize = handleSize;
+        EventManager.shoulderSize = shoulderSize;
     }
     private void OnEnable()
     {
@@ -44,35 +51,35 @@ public class collectableCubes : MonoBehaviour
         }
        
     }
-    private void KRsdUpdate()
-    {
-
-    }
-
 
     private void cubeSwitchActive()
     {
         if (EventManager.shoulder == true)
         {
-            Debug.Log("shoulder  " + EventManager.shoulder);
+          
             cubeSetActiveTrue(Shoulder);
             cubeSetActiveTrue(Shoulder1);
+            EventManager.shoulderSize = shoulderSize;
             EventManager.shoulder = false;
+            EventManager.onAnimationPlay.Invoke("RunForward");
         }
         else if (EventManager.body == true)
         {
             cubeSetActiveTrue(Body);
+            EventManager.bodySize = bodySize;
             EventManager.body = false;
         }
         else if (EventManager.handle == true)
         {
             cubeSetActiveTrue(Handle);
             cubeSetActiveTrue(Handle1);
+            EventManager.handleSize = handleSize;
             EventManager.handle = false;
         }
         else if (EventManager.head == true)
         {
             cubeSetActiveTrue(Head);
+            EventManager.headSize = headSize;
             EventManager.head = false;
 
         }
