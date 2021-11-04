@@ -62,7 +62,11 @@ public class cubeCharacter : MonoBehaviour
     }
     IEnumerator inOrderActive(GameObject obj, int i,bool isbool)
     {
-        yield return new WaitForSeconds(0.1f);
+        float x;
+        if (isbool == false)
+            x = 0.1f;
+        else x = 0.01f;
+        yield return new WaitForSeconds(x);
 
    
         if (i < obj.transform.childCount)
@@ -91,6 +95,7 @@ public class cubeCharacter : MonoBehaviour
     private void poolObjeGoToFinalScene(GameObject obj)
     {
         obj.transform.DOMove(finalTransform.position, 3f);
+        obj.layer = 10;
      
     }
     private void onFinalCubeActive()

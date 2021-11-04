@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
             EventManager.onAnimationPlay.Invoke("RunForward");
             speed = 1;
         }
-     
+     if(OnGameWin==true)
+            EventManager.onAnimationPlay.Invoke("dance");
     }
     IEnumerator enumerator()
     {
