@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6823378170162244251}
   - component: {fileID: -3687699052467949017}
   - component: {fileID: 6273087737863620415}
-  m_Layer: 0
+  - component: {fileID: -1309117862448685614}
+  m_Layer: 8
   m_Name: PrefabBevelCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,3 +111,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &-1309117862448685614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6823378170162244253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515a027a61d9cd847bdf4c82375ebb48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

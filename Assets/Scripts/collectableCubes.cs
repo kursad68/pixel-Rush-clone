@@ -29,13 +29,7 @@ public class collectableCubes : MonoBehaviour
 
     private void cubeSetActiveTrue(GameObject obj)
     {
-        /* for (int i = 0; i < obj.transform.childCount; i++)
-         {
-             obj.transform.GetChild(i).gameObject.SetActive(true);
-
-         }*/
-       
-       StartCoroutine( inOrderActive(obj, 0));
+  StartCoroutine( inOrderActive(obj, 0));
 
     }
     IEnumerator inOrderActive(GameObject obj,int i)

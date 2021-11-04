@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b78f8e590c0764395ad5541d93c2c4, type: 3}
+  m_Name: LevelHolderAsset
+  m_EditorClassIdentifier: 
+  mapPrefabs:
+  - {fileID: 5410325653470974308, guid: 4423b5912cd8b9443b669f7f09ab3207, type: 3}
+  - {fileID: 3549517552365733781, guid: e650ef440a48aba429c6e1ab2161596f, type: 3}
