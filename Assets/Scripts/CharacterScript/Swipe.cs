@@ -103,7 +103,7 @@ public class Swipe : MonoBehaviour
                     isSlide = false;
                     isjump = false;
                     EventManager.onAnimationPlay.Invoke("slide");
-                    StartCoroutine(JumpforWait(1.5f,isSlide));
+                    StartCoroutine(JumpforWait(1f,isSlide));
                 }
             }
             else

@@ -18,7 +18,8 @@ public class FinishCube : MonoBehaviour
     }
     IEnumerator waitForWin()
     {
-        yield return new WaitForSeconds(5f);
+        EventManager.onAnimationPlay.Invoke("Idle");
+        yield return new WaitForSeconds(6f);
         EventManager.OnGameWin.Invoke();
     }
 }

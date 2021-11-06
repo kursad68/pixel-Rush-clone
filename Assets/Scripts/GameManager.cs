@@ -42,13 +42,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (EventManager.handleSize <= 8 && EventManager.headSize <= 8 && EventManager.bodySize <= 8 && EventManager.shoulderSize == 0)
+        if (EventManager.handleSize <= 8 && EventManager.headSize <= 5 && EventManager.bodySize <= 8 && EventManager.shoulderSize <= 7)
         {
             speed = 0;
             EventManager.onAnimationPlay.Invoke("creed");
             onGameLost();
         }
-        if (EventManager.shoulderSize <= 10)
+        if (EventManager.shoulderSize <= 16)
         {
             EventManager.onAnimationPlay.Invoke("creed");
         }

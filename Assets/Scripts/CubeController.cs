@@ -25,7 +25,7 @@ public class CubeController : MonoBehaviour
         {
             EventManager.shoulder = true;
             EventManager.shoulderSize--;
-            if (EventManager.shoulderSize <= 9)//topalla
+            if (EventManager.shoulderSize <= 16)//topalla
             {
                 EventManager.onAnimationPlay.Invoke("creed");
             }
